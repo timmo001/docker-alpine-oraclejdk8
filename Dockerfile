@@ -52,7 +52,7 @@ ENV JAVA_VERSION=8 \
     JAVA_PATH=96a7b8442fe848ef90c96a2fad6ed6d1 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# hadolint ignore=DL3018
+# hadolint ignore=DL3018,DL3003 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     cd "/tmp" && \
     wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \

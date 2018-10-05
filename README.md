@@ -17,7 +17,8 @@
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
 > This is a fork of
-> [frolvlad/alpine-oraclejdk8](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/) with multiarch support
+> [frolvlad/alpine-oraclejdk8](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/)
+> with multiarch support
 
 This image is based on Alpine Linux image and contains
 [OracleJDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html).
