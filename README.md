@@ -1,9 +1,10 @@
 [![Docker Stars](https://img.shields.io/docker/stars/frolvlad/alpine-oraclejdk8.svg?style=flat-square)](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/frolvlad/alpine-oraclejdk8.svg?style=flat-square)](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/)
 
-
 OracleJDK 8 Docker image
 ========================
+
+> This is a fork of [frolvlad/alpine-oraclejdk8](https://hub.docker.com/r/frolvlad/alpine-oraclejdk8/) with multiarch support
 
 This image is based on Alpine Linux image, which is only a 5MB image, and contains
 [OracleJDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html).
