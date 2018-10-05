@@ -43,7 +43,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME"
 
-# Part 02
+# Install Java
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=181 \
     JAVA_BUILD=13 \
@@ -99,3 +99,16 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip &
     rm "${JAVA_HOME}/jre/lib/security/README.txt" && \
     apk del build-dependencies && \
     rm "/tmp/"*
+
+# Labels
+LABEL \
+    maintainer="Timmo <contact@timmo.xyz>" \
+    org.label-schema.description="Small Docker image with OracleJDK 8 with multiarch support" \
+    org.label-schema.build-date=${BUILD_DATE} \
+    org.label-schema.name="OracleJDK 8 Docker image" \
+    org.label-schema.schema-version="1.0" \
+    org.label-schema.url="https://git.timmo.xyz/docker-alpine-oraclejdk8" \
+    org.label-schema.usage="https://github.com/timmo001/docker-alpine-oraclejdk8/tree/master/README.md" \
+    org.label-schema.vcs-ref=${BUILD_REF} \
+    org.label-schema.vcs-url="https://github.com/timmo001/docker-alpine-oraclejdk8" \
+    org.label-schema.vendor="Timmo"
