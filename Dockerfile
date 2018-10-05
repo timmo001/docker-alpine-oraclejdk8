@@ -3,8 +3,10 @@ ARG BUILD_FROM=alpine:3.8
 FROM ${BUILD_FROM}
 
 ENV LANG=C.UTF-8
+WORKDIR /usr/src
 
 # Here we install GNU libc (aka glibc) and set C.UTF-8 locale as default.
+# hadolint ignore=DL3018
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_PACKAGE_VERSION="2.28-r0" && \
     ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
@@ -50,6 +52,7 @@ ENV JAVA_VERSION=8 \
     JAVA_PATH=96a7b8442fe848ef90c96a2fad6ed6d1 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
+# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     cd "/tmp" && \
     wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
